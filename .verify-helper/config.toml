@@ -1,6 +1,6 @@
 [languages.py]
-compile = "python {path}"
-execute = "python {path}"
+compile = "echo | python3.8 {path}"
+execute = "python3.8 {path}"
 bundle = "false"
 list_attributes = "sed 's/^# verify-helper: // ; t ; d' {path}"
 list_dependencies = "sed 's/^# @import \\(.*\\)$/\\1/ ; t ; d' {path}"

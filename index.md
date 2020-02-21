@@ -38,7 +38,7 @@ layout: default
 
 ### example_library
 
-* :warning: <a href="library/example_library/a_plus_b.py.html">example_library/a_plus_b.py</a>
+* :x: <a href="library/example_library/a_plus_b.py.html">example_library/a_plus_b.py</a>
 
 
 ## Verify Files

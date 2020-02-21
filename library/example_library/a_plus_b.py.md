@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: example_library/a_plus_b.py
+# :x: example_library/a_plus_b.py
 
 <a href="../../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-02-21 13:25:28+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../../verify/tests/a_plus_b.test.py.html">tests/a_plus_b.test.py</a>
 
 
 ## Code

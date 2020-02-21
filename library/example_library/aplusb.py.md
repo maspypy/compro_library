@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/tests/aplusb.test.py.html">tests/aplusb.test.py</a>
+* :heavy_check_mark: <a href="../../verify/tests/examples/aplusb.test.py.html">tests/examples/aplusb.test.py</a>
 
 
 ## Code

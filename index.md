@@ -34,7 +34,7 @@ layout: default
 
 ## Verify Files
 
-* :heavy_check_mark: <a href="verify/tests/example.test.cpp.html">tests/example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/tests/examples/example.test.cpp.html">tests/examples/example.test.cpp</a>
+* :x: <a href="verify/tests/examples/example.test.py.html">tests/examples/example.test.py</a>
 
 

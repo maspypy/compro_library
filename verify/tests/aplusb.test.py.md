@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/tests/aplusb.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 00:04:43+09:00
+    - Last commit date: 2020-02-22 00:06:49+09:00
 
 
 
@@ -54,7 +54,7 @@ sys.path.insert(0, '.')
 from example_library.aplusb import aplusb
 
 a, b = map(int, input().split())
-answer = a + b
+answer = aplusb(a, b)
 print(answer)
 
 ```

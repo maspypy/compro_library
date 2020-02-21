@@ -25,15 +25,19 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: example_library/a_plus_b.py
+# :heavy_check_mark: tests/aplusb.test.py
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#d0771fd7c8744fd2b67e131b5f777f13">example_library</a>
-* <a href="{{ site.github.repository_url }}/blob/master/example_library/a_plus_b.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 13:25:28+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/tests/aplusb.test.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-21 23:55:54+09:00
 
 
+
+
+## Depends on
+
+* :heavy_check_mark: <a href="../../library/example_library/aplusb.py.html">example_library/aplusb.py</a>
 
 
 ## Code
@@ -41,8 +45,13 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-def a_plus_b(a, b):
-    return a + b
+# verify-helper: PROBLEM https://judge.yosupo.jp/problem/aplusb
+# @import example_library/aplusb.py
+
+
+a, b = map(int, input().split())
+answer = a + b
+print(answer)
 
 ```
 {% endraw %}

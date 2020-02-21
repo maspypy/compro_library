@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, ".")
 input = sys.stdin.buffer.readline
 
-from python_library.math.extgcd import extgcd
+from example_library.math.extgcd import extgcd
 
 
 def main() -> None:

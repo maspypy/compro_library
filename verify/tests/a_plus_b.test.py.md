@@ -21,16 +21,16 @@ layout: default
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="../../../assets/css/copy-button.css" />
+<script type="text/javascript" src="../../assets/js/copy-button.js"></script>
+<link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: tests/examples/a_plus_b.test.py
+# :x: tests/a_plus_b.test.py
 
-<a href="../../../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/tests/examples/a_plus_b.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 13:36:37+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/tests/a_plus_b.test.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-21 13:43:10+09:00
 
 
 
@@ -64,7 +64,7 @@ Traceback (most recent call last):
     onlinejudge_verify.verify.main(paths, marker=marker, timeout=timeout, jobs=jobs)
   File "/opt/hostedtoolcache/Python/3.8.1/x64/lib/python3.8/site-packages/onlinejudge_verify/verify.py", line 133, in main
     raise Exception('{} tests failed: {}'.format(len(failed_test_paths), [str(path.relative_to(pathlib.Path.cwd())) for path in failed_test_paths]))
-Exception: 1 tests failed: ['tests/examples/a_plus_b.test.py']
+Exception: 1 tests failed: ['tests/a_plus_b.test.py']
 
 During handling of the above exception, another exception occurred:
 
@@ -82,5 +82,5 @@ subprocess.CalledProcessError: Command '['false']' returned non-zero exit status
 ```
 {% endraw %}
 
-<a href="../../../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 

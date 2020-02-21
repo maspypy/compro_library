@@ -30,7 +30,7 @@ layout: default
 <a href="../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/tests/a_plus_b.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 13:43:10+09:00
+    - Last commit date: 2020-02-21 13:46:01+09:00
 
 
 
@@ -42,9 +42,6 @@ layout: default
 ```cpp
 # verify-helper: PROBLEM https://judge.yosupo.jp/problem/aplusb
 # @import compro_library/example_library/a_plus_b.py
-import sys
-sys.path.insert(0, ".")
-
 from compro_library.example_library.a_plus_b import a_plus_b
 
 a, b = map(int, input().split())

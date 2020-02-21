@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: example_library/aplusb.py
+# :x: graph/union_find.py
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#d0771fd7c8744fd2b67e131b5f777f13">example_library</a>
-* <a href="{{ site.github.repository_url }}/blob/master/example_library/aplusb.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 23:55:54+09:00
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
+* <a href="{{ site.github.repository_url }}/blob/master/graph/union_find.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-22 04:07:29+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/tests/examples/aplusb.test.py.html">tests/examples/aplusb.test.py</a>
+* :x: <a href="../../verify/tests/yosupo_judge/unionfind.test.py.html">tests/yosupo_judge/unionfind.test.py</a>
 
 
 ## Code
@@ -46,8 +46,30 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-def aplusb(a, b):
-    return a + b
+from numba import njit
+
+
+@njit('i8(i8,i8[:])', cache=True)
+def find_root(x, root):
+    while root[x] != x:
+        root[x] = root[root[x]]
+        x = root[x]
+    return x
+
+
+@njit('b1(i8,i8,i8[:],i8[:])', cache=True)
+def merge(x, y, root, size):
+    x = find_root(x, root)
+    y = find_root(y, root)
+    if x == y:
+        return False
+    if size[x] < size[y]:
+        root[x] = y
+        size[y] += size[x]
+    else:
+        root[y] = x
+        size[x] += size[y]
+    return True
 
 ```
 {% endraw %}

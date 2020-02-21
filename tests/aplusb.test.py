@@ -7,5 +7,5 @@ sys.path.insert(0, '.')
 from example_library.aplusb import aplusb
 
 a, b = map(int, input().split())
-answer = a + b
+answer = aplusb(a, b)
 print(answer)

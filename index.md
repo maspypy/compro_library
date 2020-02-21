@@ -46,7 +46,7 @@ layout: default
 
 ### graph
 
-* :x: <a href="library/graph/union_find.py.html">graph/union_find.py</a>
+* :heavy_check_mark: <a href="library/graph/union_find.py.html">graph/union_find.py</a>
 
 
 ## Verify Files
@@ -55,6 +55,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/tests/examples/aplusb_numba.test.py.html">tests/examples/aplusb_numba.test.py</a>
 * :heavy_check_mark: <a href="verify/tests/examples/example.test.cpp.html">tests/examples/example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/tests/examples/example.test.py.html">tests/examples/example.test.py</a>
-* :x: <a href="verify/tests/yosupo_judge/unionfind.test.py.html">tests/yosupo_judge/unionfind.test.py</a>
+* :heavy_check_mark: <a href="verify/tests/yosupo_judge/unionfind.test.py.html">tests/yosupo_judge/unionfind.test.py</a>
 
 

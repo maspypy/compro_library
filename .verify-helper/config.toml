@@ -1,5 +1,5 @@
 [languages.py]
-compile = "bash -c 'echo hello > {tempdir}/hello'"
+compile = "python {path}"
 execute = "python {path}"
 bundle = "false"
 list_attributes = "sed 's/^# verify-helper: // ; t ; d' {path}"

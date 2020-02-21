@@ -25,19 +25,19 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: tests/examples/aplusb.test.py
+# :x: tests/examples/aplusb_numba.test.py
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/tests/examples/aplusb.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 02:40:49+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/tests/examples/aplusb_numba.test.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-22 02:49:11+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/example_library/aplusb.py.html">example_library/aplusb.py</a>
+* :x: <a href="../../../library/example_library/aplusb_numba.py.html">example_library/aplusb_numba.py</a>
 
 
 ## Code
@@ -46,12 +46,11 @@ layout: default
 {% raw %}
 ```cpp
 # verify-helper: PROBLEM https://judge.yosupo.jp/problem/aplusb
-# @import example_library/aplusb.py
-
+# @import example_library/aplusb_numba.py
 import sys
 sys.path.insert(0, '.')
 
-from example_library.aplusb import aplusb
+from example_library.aplusb_numba import aplusb
 
 a, b = map(int, input().split())
 answer = aplusb(a, b)

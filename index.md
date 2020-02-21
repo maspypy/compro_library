@@ -39,13 +39,18 @@ layout: default
 ### example_library
 
 * :warning: <a href="library/example_library/a_plus_b.py.html">example_library/a_plus_b.py</a>
-* :x: <a href="library/example_library/extgcd.py.html">example_library/extgcd.py</a>
+
+
+<div id="fcc812ea527936762e2a2536e11e6960"></div>
+
+### python_library/math
+
+* :warning: <a href="library/python_library/math/extgcd.py.html">python_library/math/extgcd.py</a>
 
 
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/tests/examples/example.test.cpp.html">tests/examples/example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/tests/examples/example.test.py.html">tests/examples/example.test.py</a>
-* :x: <a href="verify/tests/extgcd.test.py.html">tests/extgcd.test.py</a>
 
 

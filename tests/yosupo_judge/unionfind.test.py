@@ -5,12 +5,10 @@ sys.path.insert(0, '.')
 
 from graph.union_find import find_root, merge
 import numpy as np
+from numba import njit
 
 
-stdin = open(0)
-data = np.fromstring(stdin.read(), np.int64, sep=' ')
-
-
+@njit('void(i8[:])', cache=True)
 def main(data):
     N, Q = data[:2]
     TUV = data[2:]
@@ -26,4 +24,6 @@ def main(data):
             print(1 if find_root(u, root) == find_root(v, root) else 0)
 
 
+stdin = open(0)
+data = np.fromstring(stdin.read(), np.int64, sep=' ')
 main(data)

@@ -1,11 +1,11 @@
 # verify-helper: PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
-# @import example_library/extgcd.py
+# @import python_library/math/extgcd.py
 import sys
 
 sys.path.insert(0, ".")
 input = sys.stdin.buffer.readline
 
-from example_library.math.extgcd import extgcd
+from python_library.math.extgcd import extgcd
 
 
 def main() -> None:

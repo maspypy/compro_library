@@ -25,19 +25,19 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: tests/a_plus_b.test.py
+# :x: tests/extgcd.test.py
 
 <a href="../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/tests/a_plus_b.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 23:39:35+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/tests/extgcd.test.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-21 23:43:01+09:00
 
 
 
 
 ## Depends on
 
-* :x: <a href="../../library/example_library/a_plus_b.py.html">example_library/a_plus_b.py</a>
+* :x: <a href="../../library/example_library/extgcd.py.html">example_library/extgcd.py</a>
 
 
 ## Code
@@ -45,18 +45,21 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-# verify-helper: PROBLEM https://judge.yosupo.jp/problem/aplusb
-# @import example_library/a_plus_b.py
-from example_library.a_plus_b import a_plus_b
+# verify-helper: PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
+# @import example_library/extgcd.py
+import sys
+
+sys.path.insert(0, ".")
+input = sys.stdin.buffer.readline
+
+from python_library.math.extgcd import extgcd
 
 
-def main():
-    a, b = map(int, input().split())
-    answer = a_plus_b(a, b)
-    print(answer)
+def main() -> None:
+    print(*extgcd(*map(int, input().split()))[:-1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 ```
@@ -72,7 +75,7 @@ Traceback (most recent call last):
     onlinejudge_verify.verify.main(paths, marker=marker, timeout=timeout, jobs=jobs)
   File "/opt/hostedtoolcache/Python/3.8.1/x64/lib/python3.8/site-packages/onlinejudge_verify/verify.py", line 133, in main
     raise Exception('{} tests failed: {}'.format(len(failed_test_paths), [str(path.relative_to(pathlib.Path.cwd())) for path in failed_test_paths]))
-Exception: 1 tests failed: ['tests/a_plus_b.test.py']
+Exception: 1 tests failed: ['tests/extgcd.test.py']
 
 During handling of the above exception, another exception occurred:
 

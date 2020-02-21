@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: example_library/a_plus_b.py
+# :x: example_library/extgcd.py
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#d0771fd7c8744fd2b67e131b5f777f13">example_library</a>
-* <a href="{{ site.github.repository_url }}/blob/master/example_library/a_plus_b.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 13:25:28+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/example_library/extgcd.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-21 23:43:01+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../../verify/tests/extgcd.test.py.html">tests/extgcd.test.py</a>
 
 
 ## Code
@@ -41,8 +46,19 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-def a_plus_b(a, b):
-    return a + b
+
+def extgcd(a, b):
+    """solve ax + by = gcd(a, b)
+       return x, y, gcd(a, b)
+       used in NTL1E(AOJ)
+    """
+    g = a
+    if b == 0:
+        x, y = 1, 0
+    else:
+        x, y, g = extgcd(b, a % b)
+        x, y = y, x - a // b * y
+    return x, y, g
 
 ```
 {% endraw %}

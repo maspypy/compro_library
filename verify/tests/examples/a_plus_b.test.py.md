@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: tests/examples/example.test.py
+# :x: tests/examples/a_plus_b.test.py
 
 <a href="../../../index.html">Back to top page</a>
 
-* <a href="{{ site.github.repository_url }}/blob/master/tests/examples/example.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-21 13:17:01+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/tests/examples/a_plus_b.test.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-21 13:25:28+09:00
 
 
 
@@ -41,10 +41,11 @@ layout: default
 {% raw %}
 ```cpp
 # verify-helper: PROBLEM https://judge.yosupo.jp/problem/aplusb
-
+# @import compro_library/example_library/a_plus_b.py
+from compro_library.example_library.a_plus_b import a_plus_b
 
 a, b = map(int, input().split())
-answer = a + b
+answer = a_plus_b(a, b)
 print(answer)
 
 ```

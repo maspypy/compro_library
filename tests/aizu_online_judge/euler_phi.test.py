@@ -1,8 +1,9 @@
-# verify-helper: PROBLEM
+# verify-helper: PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2286
 # @import number_theory/prime.py
-# @import number_theory/dirichlet_conbolution.py
+# @import number_theory/dirichlet_convolution.py
 import sys
 sys.path.insert(0, '.')
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines

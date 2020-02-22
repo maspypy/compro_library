@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/union_find.py
+# :x: number_theory/prime.py
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/union_find.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-22 04:07:29+09:00
+* category: <a href="../../index.html#814c07620aec62314b2fd23fc462e282">number_theory</a>
+* <a href="{{ site.github.repository_url }}/blob/master/number_theory/prime.py">View this file on GitHub</a>
+    - Last commit date: 2020-02-22 13:47:05+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/tests/yosupo_judge/unionfind.test.py.html">tests/yosupo_judge/unionfind.test.py</a>
+* :x: <a href="../../verify/tests/aizu_online_judge/euler_phi.test.py.html">tests/aizu_online_judge/euler_phi.test.py</a>
 
 
 ## Code
@@ -46,30 +46,33 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-from numba import njit
+import numpy as np
 
 
-@njit('i8(i8,i8[:])', cache=True)
-def find_root(x, root):
-    while root[x] != x:
-        root[x] = root[root[x]]
-        x = root[x]
-    return x
+def prime_table(N):
+    """Create prime table of interval [0, N)
 
+    Parameters
+    ----------
+    N : int
+        Upper bound. N must be >= 2.
 
-@njit('b1(i8,i8,i8[:],i8[:])', cache=True)
-def merge(x, y, root, size):
-    x = find_root(x, root)
-    y = find_root(y, root)
-    if x == y:
-        return False
-    if size[x] < size[y]:
-        root[x] = y
-        size[y] += size[x]
-    else:
-        root[y] = x
-        size[x] += size[y]
-    return True
+    Returns
+    -------
+    tuple of two arrays.
+    is_prime: is_prime[i] = True iff i is prime.
+    primes: primes[i] = (i+1)-th prime
+    """
+    is_prime = np.zeros(N, np.bool_)
+    is_prime[2] = 1
+    is_prime[3::2] = 1
+    for p in range(3, N, 2):
+        if p * p > N:
+            break
+        if is_prime[p]:
+            is_prime[p * p::p + p] = 0
+    primes = np.where(is_prime)[0]
+    return is_prime, primes
 
 ```
 {% endraw %}

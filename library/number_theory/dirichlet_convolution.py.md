@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: number_theory/dirichlet_convolution.py
+# :heavy_check_mark: number_theory/dirichlet_convolution.py
 
 <a href="../../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-02-23 01:21:39+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/tests/aizu_online_judge/euler_phi.test.py.html">tests/aizu_online_judge/euler_phi.test.py</a>
 
 
 ## Code

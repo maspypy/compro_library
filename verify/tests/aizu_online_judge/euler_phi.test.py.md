@@ -25,19 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :x: tests/aizu_online_judge/euler_phi.test.py
+# :heavy_check_mark: tests/aizu_online_judge/euler_phi.test.py
 
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/tests/aizu_online_judge/euler_phi.test.py">View this file on GitHub</a>
-    - Last commit date: 2020-02-23 01:32:46+09:00
+    - Last commit date: 2020-02-23 02:23:48+09:00
 
 
 
 
 ## Depends on
 
-* :x: <a href="../../../library/number_theory/prime.py.html">number_theory/prime.py</a>
+* :heavy_check_mark: <a href="../../../library/number_theory/dirichlet_convolution.py.html">number_theory/dirichlet_convolution.py</a>
+* :heavy_check_mark: <a href="../../../library/number_theory/prime.py.html">number_theory/prime.py</a>
 
 
 ## Code
@@ -45,11 +46,12 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-# verify-helper: PROBLEM
+# verify-helper: PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2286
 # @import number_theory/prime.py
-# @import number_theory/dirichlet_conbolution.py
+# @import number_theory/dirichlet_convolution.py
 import sys
 sys.path.insert(0, '.')
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
